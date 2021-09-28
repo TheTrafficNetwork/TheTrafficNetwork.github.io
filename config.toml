@@ -1,0 +1,9 @@
+baseURL = 'https://TheTrafficNetwork.github.io/'
+languageCode = 'en-us'
+theme = 'anatole'
+enableEmoji = true
+
+[params]
+title = 'Checking out this Hugo thing.'
+author = 'TheTrafficNetwork'
+description = 'Routing People and Packets'
