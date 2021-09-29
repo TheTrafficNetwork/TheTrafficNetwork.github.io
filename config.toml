@@ -8,3 +8,21 @@ title = 'Routing People and Packets'
 author = 'TheTrafficNetwork'
 description = 'These are the random musings of a traffic engineer in a networking role'
 profilePicture = "images/Traffic-Lights-Exposure.jpg"
+contentration = 0.7
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/_TrafficNetwork"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/TheTrafficNetwork"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/brian-doubrava-04b66a7a"
