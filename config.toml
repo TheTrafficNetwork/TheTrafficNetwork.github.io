@@ -1,14 +1,34 @@
 baseURL = 'https://TheTrafficNetwork.github.io/'
 languageCode = 'en-us'
 theme = 'anatole'
+title = 'Routing People and Packets'
 enableEmoji = true
+enableRobotsTXT = true
+summarylength = 10
 
 [params]
 title = 'Routing People and Packets'
 author = 'TheTrafficNetwork'
-description = 'These are the random musings of a traffic engineer in a networking role'
-profilePicture = "images/Traffic-Lights-Exposure.jpg"
-contentration = 0.7
+description = 'These are the random musings of a traffic engineer transitioning to a networking role'
+profilePicture = "profile/Traffic-Lights-Exposure.jpg"
+copyright = "TheTrafficNetwork 2021-{{ YEAR }}"
+keywords = 'networking,cisco,ccnp,devnet,traffic,transportation,ITS,ATMS,ATSPM'
+
+contentratio = 0.65
+mainSections = ['blog']
+postSectionName = 'blog'
+doNotLoadAnimations = false
+displayMode = 'dark'
+readMore = true
+fullPostContent = false
+reversepagetitle = true
+pygmentsUseClasses = true   
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+singleDateFormat = "2006-01-02"
+indexDateFormat = "2006-01-02"
+listDateFormat = "Jan, 2"
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
@@ -26,3 +46,33 @@ url = "https://github.com/TheTrafficNetwork"
 icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "https://www.linkedin.com/in/TheTrafficNetwork"
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+#  [[menu.main]]
+#  name = "About"
+#  weight = 200
+#  identifier = "about"
+#  url = "/about/"
+
+  [[menu.main]]
+  name = "Blog"
+  weight = 300
+  identifier = "blog"
+  url = "/blog/"
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+## Math settings
+[math]
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
