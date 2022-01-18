@@ -16,15 +16,15 @@ disableComments: true #Set to 'true' if you need to disable comments for any pos
 
 ## Do you need to be able to utilize the GUI interface for Cisco devices?
 
-Maybe not. I know you're the master of the CLI and automation, but the GUI could still provide utility to people that can help make your life easier. For instance, we have traffic signal technicians that I work with to deploy various devices at our signalized intersections around the city. They have zero experience programming a switch through the cli, nor do they really want to. What the GUI does allow them acecss to is the ability to see if there is an errored out switch port, or a mismatched vlan, or even the port description for where they need to deploy devices to while still in the shop before they go to the field and start troubleshooting a problem that they might not be able to. The GUI saves time for us, and money for the taxpayers.
+Maybe not. I know you're the master of the CLI and automation, but the GUI could still provide utility to people that can help make your life easier. For instance, we have traffic signal technicians that I work with to deploy various devices at our signalized intersections around the city. They have zero experience programming a switch through the cli, nor do they really want to. What the GUI does allow them access to is the ability to see if there is a port error, or a mismatched vlan, or even the port description for where they need to deploy devices to while still in the shop before they go to the field and start troubleshooting a problem that they might not be able to. The GUI saves time for us, and money for the taxpayers.
 
-So how do we perform IOS upgrades with the GUI? When you navigate through [Cisco's software download site](https://software.cisco.com/download/home) to the model of your device, you will find that there is a .bin file and a .tar file. The .bin is your standard IOS upgrade. It can be downloaded to a workstation or server and then through the use of a tftp application, get transfered over to the switch. With a simple change of the boot location and a reload, Ta-Da, a new IOS version is running on your switch. The GUI application file is almost as simple, it just takes more time and utilizes a different file transfer command. Let's dive in!
+So how do we perform IOS upgrades with the GUI? When you navigate through [Cisco's software download site](https://software.cisco.com/download/home) to the model of your device, you will find that there is a .bin file and a .tar file. The .bin is your standard IOS upgrade. It can be downloaded to a workstation or server and then through the use of a tftp application, get transferred over to the switch. With a simple change of the boot location and a reload, Ta-Da, a new IOS version is running on your switch. The GUI application file is almost as simple, it just takes more time and utilizes a different file transfer command. Let's dive in!
 
 **Here are the steps we will perform:**
 
 1. Check the current version
    - ```Switch#show version```
-2. Downlaod the new IOS file
+2. Download the new IOS file
    - <https://software.cisco.com/download/home>
 3. Check the device to see if we have enough room for the new image
    - ```Switch#dir flash:```
@@ -61,7 +61,7 @@ After we have the download and see how much space we have available in our devic
 
 ## TRANSFER AND EXTRACT THE .TAR FILE TO THE DEVICE'S FLASH
 
-It looks like there is enough room to get the image on the device so do we just copy it over .bin syle? How would we set the boot command to the IOS image then? We must perform an extraction on the .tar file to get all the files out of the .tar and installed into the flash. The command needed to accomplish this is: **```archive tar /xtract {source} {destination}```**. Since this is being performed on an isolated lab, I will use a tftp server on my workstation as I don't anything more secure and we will transfer the files to the **```flash:```** of the device.
+It looks like there is enough room to get the image on the device so do we just copy it over .bin style? How would we set the boot command to the IOS image then? We must perform an extraction on the .tar file to get all the files out of the .tar and installed into the flash. The command needed to accomplish this is: **```archive tar /xtract {source} {destination}```**. Since this is being performed on an isolated lab, I will use a tftp server on my workstation as I don't anything more secure and we will transfer the files to the **```flash:```** of the device.
 
 **Switch#archive tar /xtract tftp://10.10.10.120/c2960c405-universalk9-tar.152-7.E3.tar flash:** {{< figure src="/images/ios-updates/tar_xtract.png" caption="The waiting game begins...">}}
 
