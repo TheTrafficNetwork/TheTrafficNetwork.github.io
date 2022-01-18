@@ -1,0 +1,234 @@
+<!doctype html><html dir=ltr lang=en data-theme=dark><head>
+<title>
+TheTrafficNetwork
+|
+IOS v12/15 update using archive tar /xtract
+</title>
+<meta charset=utf-8><meta name=generator content="Hugo 0.92.0"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="
+      Updating Cisco IOS v12 and v15 using archive tar /xtract
+
+
+    ">
+<link rel=stylesheet href=/css/main.min.963c46dd58bebf1842d24366c73c1eaf4eb58aeddb2c0c96bedde0223fc3e714.css integrity="sha256-ljxG3Vi+vxhC0kNmxzwer061iu3bLAyWvt3gIj/D5xQ=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=/css/markupHighlight.min.8e4c8f0a940b1596fb4c64d28a00a5ceed671fc303cb65178b4947417da9c674.css integrity="sha256-jkyPCpQLFZb7TGTSigClzu1nH8MDy2UXi0lHQX2pxnQ=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=canonical href=/blog/2022-01-16/ios-v12-v15-upgrade/>
+<script type=text/javascript src=/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus=" crossorigin=anonymous></script>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://TheTrafficNetwork.github.io/images/ios-updates/gui_dashboard.png">
+<meta name=twitter:title content="IOS v12/15 update using archive tar /xtract">
+<meta name=twitter:description content="Updating Cisco IOS v12 and v15 using archive tar /xtract">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"blog","name":"IOS v12\/15 update using archive tar \/xtract","headline":"IOS v12\/15 update using archive tar \/xtract","alternativeHeadline":"","description":"
+      Updating Cisco IOS v12 and v15 using archive tar \/xtract
+
+
+    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/"},"author":{"@type":"Person","name":"TheTrafficNetwork"},"creator":{"@type":"Person","name":"TheTrafficNetwork"},"accountablePerson":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightHolder":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightYear":"2022","dateCreated":"2022-01-16T20:13:48.00Z","datePublished":"2022-01-16T20:13:48.00Z","dateModified":"2022-01-16T20:13:48.00Z","publisher":{"@type":"Organization","name":"TheTrafficNetwork","url":"https://TheTrafficNetwork.github.io/","logo":{"@type":"ImageObject","url":"https:\/\/TheTrafficNetwork.github.io\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://TheTrafficNetwork.github.io/images/ios-updates/gui_dashboard.png","https://TheTrafficNetwork.github.io/images/ios-updates/tar_xtract.png","https://TheTrafficNetwork.github.io/images/ios-updates/ios_download.png"],"url":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/","wordCount":"926","genre":[],"keywords":["IOS","Cisco","Networking"]}</script>
+</head>
+<body>
+<header><div class="page-top
+animated fadeInDown">
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+<nav>
+<ul class=nav__list id=navMenu>
+<div class=nav__links>
+<li>
+<a href=/ title>Home</a>
+</li>
+<li>
+<a href=/blog/ title>Blog</a>
+</li>
+</div>
+<li>
+<a class=theme-switch title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<div class=wrapper>
+<aside><div class="sidebar
+animated fadeInDown">
+<div class=sidebar__content>
+<div class=logo-title>
+<div class=title>
+<img src=/profile/Traffic-Lights-Exposure.jpg alt="profile picture">
+<h3 title><a href=/>Routing People and Packets</a></h3>
+<div class=description>
+<p>These are the random musings of a traffic engineer transitioning to a networking role</p>
+</div>
+</div>
+</div>
+<ul class=social-links>
+<li>
+<a href=https://twitter.com/_TrafficNetwork rel=me aria-label=Twitter>
+<i class="fab fa-twitter fa-2x" aria-hidden=true></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/TheTrafficNetwork rel=me aria-label=GitHub>
+<i class="fab fa-github fa-2x" aria-hidden=true></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/TheTrafficNetwork rel=me aria-label=Linkedin>
+<i class="fab fa-linkedin fa-2x" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div><footer class="footer footer--sidebar">
+<div class=by_farbox>
+<ul class=footer__list>
+<li class=footer__item>
+&copy;
+TheTrafficNetwork 2021-2022
+</li>
+</ul>
+</div>
+</footer>
+<script type=text/javascript src=/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I=" crossorigin=anonymous></script></div>
+</aside>
+<main>
+<div class=autopagerize_page_element>
+<div class=content>
+<div class="post
+animated fadeInDown">
+<div class=post-content>
+<div class=post-title>
+<h1>IOS v12/15 update using archive tar /xtract</h1>
+<div class=info>
+<em class="fas fa-calendar-day"></em>
+<span class=date>
+2022-01-16
+</span>
+<em class="fas fa-stopwatch"></em>
+<span class=reading-time>5-minute read</span>
+</div>
+</div><h2 id=do-you-need-to-be-able-to-utilize-the-gui-interface-for-cisco-devices>Do you need to be able to utilize the GUI interface for Cisco devices?</h2>
+<p>Maybe not. I know you&rsquo;re the master of the CLI and automation, but the GUI could still provide utility to people that can help make your life easier. For instance, we have traffic signal technicians that I work with to deploy various devices at our signalized intersections around the city. They have zero experience programming a switch through the cli, nor do they really want to. What the GUI does allow them acecss to is the ability to see if there is an errored out switch port, or a mismatched vlan, or even the port description for where they need to deploy devices to while still in the shop before they go to the field and start troubleshooting a problem that they might not be able to. The GUI saves time for us, and money for the taxpayers.</p>
+<p>So how do we perform IOS upgrades with the GUI? When you navigate through <a href=https://software.cisco.com/download/home>Cisco&rsquo;s software download site</a> to the model of your device, you will find that there is a .bin file and a .tar file. The .bin is your standard IOS upgrade. It can be downloaded to a workstation or server and then through the use of a tftp application, get transfered over to the switch. With a simple change of the boot location and a reload, Ta-Da, a new IOS version is running on your switch. The GUI application file is almost as simple, it just takes more time and utilizes a different file transfer command. Let&rsquo;s dive in!</p>
+<p><strong>Here are the steps we will perform:</strong></p>
+<ol>
+<li>Check the current version
+<ul>
+<li><code>Switch#show version</code></li>
+</ul>
+</li>
+<li>Downlaod the new IOS file
+<ul>
+<li><a href=https://software.cisco.com/download/home>https://software.cisco.com/download/home</a></li>
+</ul>
+</li>
+<li>Check the device to see if we have enough room for the new image
+<ul>
+<li><code>Switch#dir flash:</code></li>
+</ul>
+</li>
+<li>Transfer and extract the .tar file to the device&rsquo;s flash:
+<ul>
+<li><code>Switch#archive tar /xtract {remote-host}{file}.tar flash:</code></li>
+</ul>
+</li>
+<li>Change the boot location
+<ul>
+<li><code>Switch(config)#boot system flash:/{folder}{file}.bin</code></li>
+</ul>
+</li>
+<li>Reload the device
+<ul>
+<li><code>Switch#reload</code></li>
+</ul>
+</li>
+<li>Verify the new version
+<ul>
+<li><code>Switch#show version</code></li>
+</ul>
+</li>
+<li>Delete the old files
+<ul>
+<li><code>Switch#delete /recursive /force flash:/{old-folder}</code></li>
+</ul>
+</li>
+</ol>
+<p>Let&rsquo;s get into the details.</p>
+<h2 id=check-the-current-version>CHECK THE CURRENT VERSION</h2>
+<p>To see the version of software we are currently running, a <code>show version</code> command is used:</p>
+<p><strong>Switch#show version</strong><figure><img src=/images/ios-updates/old_show_version.png alt="The current version is 15.0(2)SE5"><figcaption>
+<p>The current version is 15.0(2)SE5</p>
+</figcaption>
+</figure>
+</p>
+<h2 id=download-the-new-ios-file>DOWNLOAD THE NEW IOS FILE</h2>
+<p>Looks like we are using an older version so let&rsquo;s download the updated software from <a href=https://software.cisco.com/download/home>Cisco&rsquo;s software download site</a> and navigating to the device in question: a Catalyst 2960C-12PC-L. Like mentioned before, the .tar file is what we are looking for in the download pages. This file includes the IOS upgrade as well as the web based manager. <figure><img src=/images/ios-updates/ios_download.png>
+</figure>
+</p>
+<h2 id=make-sure-there-is-enough-room-in-the-flash-for-the-new-image>MAKE SURE THERE IS ENOUGH ROOM IN THE FLASH FOR THE NEW IMAGE</h2>
+<p>After we have the download and see how much space we have available in our device&rsquo;s flash with the command: <strong><code>dir flash</code></strong> and compare the free space to the size of the .tar file. If there is not enough room, you can remove files from the flash: with the <strong><code>delete flash:/{file}</code></strong> command.</p>
+<p><strong>Switch#dir flash</strong></p>
+<p><em><strong>Disclaimer: Before you delete any files on your flash, make sure you know exactly what they do and if they are unused. Files that are safe to delete are typically older IOS versions that you are not currently booted to.</strong></em></p>
+<h2 id=transfer-and-extract-the-tar-file-to-the-devices-flash>TRANSFER AND EXTRACT THE .TAR FILE TO THE DEVICE&rsquo;S FLASH</h2>
+<p>It looks like there is enough room to get the image on the device so do we just copy it over .bin syle? How would we set the boot command to the IOS image then? We must perform an extraction on the .tar file to get all the files out of the .tar and installed into the flash. The command needed to accomplish this is: <strong><code>archive tar /xtract {source} {destination}</code></strong>. Since this is being performed on an isolated lab, I will use a tftp server on my workstation as I don&rsquo;t anything more secure and we will transfer the files to the <strong><code>flash:</code></strong> of the device.</p>
+<p><strong>Switch#archive tar /xtract tftp://10.10.10.120/c2960c405-universalk9-tar.152-7.E3.tar flash:</strong> <figure><img src=/images/ios-updates/tar_xtract.png alt="The waiting game begins&amp;hellip;"><figcaption>
+<p>The waiting game begins&mldr;</p>
+</figcaption>
+</figure>
+</p>
+<h2 id=change-the-boot-location>CHANGE THE BOOT LOCATION</h2>
+<p>The extraction process creates a new folder in the flash that uses the name of the .tar file. Within that folder is a .bin file with the same name. For the device to boot into the new IOS version, we need to issue a new boot command in configuration to point at the newly created bin file.</p>
+<p><strong>Switch(config)#boot system flash:/c2960c405-universalk9-tar.152-7.E3/c2960c405-universalk9-tar.152-7.E3.bin</strong></p>
+<h2 id=reload-the-device>RELOAD THE DEVICE</h2>
+<p>The next time the switch boots up, it will load the new ios. Let&rsquo;s force that now with a <strong><code>reload</code></strong> command:</p>
+<p><strong>Switch#reload</strong><figure><img src=/images/ios-updates/flash_loading.png alt="You can see the updated version here as well"><figcaption>
+<p>You can see the updated version here as well</p>
+</figcaption>
+</figure>
+</p>
+<h2 id=verify-the-new-version>VERIFY THE NEW VERSION</h2>
+<p>Like in the first step, we will use the <strong><code>show version</code></strong> command.<figure><img src=/images/ios-updates/new_show_version.png alt="Updated to version 15.2(7)E3"><figcaption>
+<p>Updated to version 15.2(7)E3</p>
+</figcaption>
+</figure>
+</p>
+<h2 id=delete-the-old-files>DELETE THE OLD FILES</h2>
+<p>If your device did not have the GUI installed on the previous version, deleting the old file should be as easy as using the <strong><code>delete flash:/{file}</code></strong> command. However, if there was a GUI interface installed, there is an entire folder structure that you need to remove and a basic delete file command will not work. There are some command options that you must apply so that a folder is forceably removed. These are <strong><code>/recursive</code></strong> and <strong><code>/force</code></strong>.</p>
+<p><strong>Switch#delete /recursive /force flash:/c2960c405-universalk9-mz.150-2.SE5</strong><figure><img src=/images/ios-updates/delete_old_folder.png>
+</figure>
+</p>
+<h2 id=access-the-web-management-in-browser>ACCESS THE WEB MANAGEMENT IN BROWSER</h2>
+<p>Now in a web browser, navigate to your management IP address to view the GUI. To get in, you will need to create a login credentials and set <code>http authentication {aaa|enable|local}</code> under the switch config accordingly.<figure><img src=/images/ios-updates/gui_dashboard.png>
+</figure>
+</p>
+<p>There you have it. A switch with an updated IOS complete with Web Based Manager. Enjoy!</p>
+</div>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=tag href=/tags/ios/>IOS</a><a class=tag href=/tags/cisco/>Cisco</a><a class=tag href=/tags/networking/>Networking</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div><footer class="footer footer--base">
+<div class=by_farbox>
+<ul class=footer__list>
+<li class=footer__item>
+&copy;
+TheTrafficNetwork 2021-2022
+</li>
+</ul>
+</div>
+</footer>
+<script type=text/javascript src=/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I=" crossorigin=anonymous></script></body>
+</html>
