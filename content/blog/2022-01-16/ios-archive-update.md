@@ -16,11 +16,11 @@ disableComments: true #Set to 'true' if you need to disable comments for any pos
 
 ## Do you need to be able to utilize the GUI interface for Cisco devices?
 
-Maybe not. I know you're the master of the CLI and automation, but the GUI could still provide utility to people that can help make your life easier. For instance, we have traffic signal technicians that I work with to deploy various devices at our signalized intersections around the city. They have zero experience programming a switch through the cli, nor do they really want to. What the GUI does allow them access to is the ability to see if there is a port error, or a mismatched vlan, or even the port description for where they need to deploy devices to while still in the shop before they go to the field and start troubleshooting a problem that they might not be able to. The GUI saves time for us, and money for the taxpayers.
+Maybe not. You might be the master of the CLI or automation, but the GUI could still provide utility to people that can help make your life easier. For instance, we have traffic signal technicians that deploy various devices at our signalized intersections, but they don't have any experience programming a switch, or have access to the cli. What the GUI does allow them access to is the ability to see if there is a port error, or a mismatched vlan assingment, or even what the port description for where they need to deploy devices to while still in the shop before they go to the field and start troubleshooting a problem that they might not be able to. The GUI saves time for us, and money for the taxpayers.
 
 So how do we perform IOS upgrades with the GUI? When you navigate through [Cisco's software download site](https://software.cisco.com/download/home) to the model of your device, you will find that there is a .bin file and a .tar file. The .bin is your standard IOS upgrade. It can be downloaded to a workstation or server and then through the use of a tftp application, get transferred over to the switch. With a simple change of the boot location and a reload, Ta-Da, a new IOS version is running on your switch. The GUI application file is almost as simple, it just takes more time and utilizes a different file transfer command. Let's dive in!
 
-**Here are the steps we will perform:**
+## Here are the steps we will perform:
 
 1. Check the current version
    - ```Switch#show version```
