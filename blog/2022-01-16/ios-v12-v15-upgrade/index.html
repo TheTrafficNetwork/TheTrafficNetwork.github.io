@@ -28,7 +28,7 @@ IOS v12/15 update using archive tar /xtract
       Updating Cisco IOS v12 and v15 using archive tar \/xtract
 
 
-    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/"},"author":{"@type":"Person","name":"TheTrafficNetwork"},"creator":{"@type":"Person","name":"TheTrafficNetwork"},"accountablePerson":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightHolder":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightYear":"2022","dateCreated":"2022-01-16T20:13:48.00Z","datePublished":"2022-01-16T20:13:48.00Z","dateModified":"2022-01-16T20:13:48.00Z","publisher":{"@type":"Organization","name":"TheTrafficNetwork","url":"https://TheTrafficNetwork.github.io/","logo":{"@type":"ImageObject","url":"https:\/\/TheTrafficNetwork.github.io\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://TheTrafficNetwork.github.io/images/ios-updates/gui_dashboard.png","https://TheTrafficNetwork.github.io/images/ios-updates/tar_xtract.png","https://TheTrafficNetwork.github.io/images/ios-updates/ios_download.png"],"url":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/","wordCount":"918","genre":[],"keywords":["IOS","Cisco","Networking"]}</script>
+    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/"},"author":{"@type":"Person","name":"TheTrafficNetwork"},"creator":{"@type":"Person","name":"TheTrafficNetwork"},"accountablePerson":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightHolder":{"@type":"Person","name":"TheTrafficNetwork"},"copyrightYear":"2022","dateCreated":"2022-01-16T20:13:48.00Z","datePublished":"2022-01-16T20:13:48.00Z","dateModified":"2022-01-16T20:13:48.00Z","publisher":{"@type":"Organization","name":"TheTrafficNetwork","url":"https://TheTrafficNetwork.github.io/","logo":{"@type":"ImageObject","url":"https:\/\/TheTrafficNetwork.github.io\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://TheTrafficNetwork.github.io/images/ios-updates/gui_dashboard.png","https://TheTrafficNetwork.github.io/images/ios-updates/tar_xtract.png","https://TheTrafficNetwork.github.io/images/ios-updates/ios_download.png"],"url":"https:\/\/TheTrafficNetwork.github.io\/blog\/2022-01-16\/ios-v12-v15-upgrade\/","wordCount":"900","genre":["IOS","Cisco","Networking"],"keywords":[]}</script>
 </head>
 <body>
 <header><div class="page-top
@@ -176,7 +176,7 @@ animated fadeInDown">
 <h2 id=make-sure-there-is-enough-room-in-the-flash-for-the-new-image>MAKE SURE THERE IS ENOUGH ROOM IN THE FLASH FOR THE NEW IMAGE</h2>
 <p>After we have the download and see how much space we have available in our device&rsquo;s flash with the command: <strong><code>dir flash</code></strong> and compare the free space to the size of the .tar file. If there is not enough room, you can remove files from the flash: with the <strong><code>delete flash:/{file}</code></strong> command.</p>
 <p><strong>Switch#dir flash</strong></p>
-<p><em><strong>Disclaimer: Before you delete any files on your flash, make sure you know exactly what they do and if they are unused. Files that are safe to delete are typically older IOS versions that you are not currently booted to.</strong></em></p>
+<p><em><strong>Disclaimer: Before you delete any files on your flash, make sure you know exactly what they do and if they are unused.</strong></em></p>
 <h2 id=transfer-and-extract-the-tar-file-to-the-devices-flash>TRANSFER AND EXTRACT THE .TAR FILE TO THE DEVICE&rsquo;S FLASH</h2>
 <p>It looks like there is enough room to get the image on the device so do we just copy it over .bin style? How would we set the boot command to the IOS image then? We must perform an extraction on the .tar file to get all the files out of the .tar and installed into the flash. The command needed to accomplish this is: <strong><code>archive tar /xtract {source} {destination}</code></strong>. Since this is being performed on an isolated lab, I will use a tftp server on my workstation as I don&rsquo;t anything more secure and we will transfer the files to the <strong><code>flash:</code></strong> of the device.</p>
 <p><strong>Switch#archive tar /xtract tftp://10.10.10.120/c2960c405-universalk9-tar.152-7.E3.tar flash:</strong> <figure><img src=/images/ios-updates/tar_xtract.png alt="The waiting game begins&amp;hellip;"><figcaption>
@@ -213,7 +213,7 @@ animated fadeInDown">
 </div>
 <div class=post-footer>
 <div class=info>
-<span class=separator><a class=tag href=/tags/ios/>IOS</a><a class=tag href=/tags/cisco/>Cisco</a><a class=tag href=/tags/networking/>Networking</a></span>
+<span class=separator><a class=category href=/categories/ios/>IOS</a><a class=category href=/categories/cisco/>Cisco</a><a class=category href=/categories/networking/>Networking</a></span>
 </div>
 </div>
 </div>
