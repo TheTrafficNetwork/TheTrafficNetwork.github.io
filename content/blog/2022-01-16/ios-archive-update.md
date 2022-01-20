@@ -7,8 +7,8 @@ description: "Updating Cisco IOS v12 and v15 using archive tar /xtract" #Descrip
 summary: "Updating Cisco IOS v12 and v15 using archive tar /xtract" #Used on Archive Pages and in RSS
 images: ["/images/ios-updates/gui_dashboard.png","/images/ios-updates/tar_xtract.png","/images/ios-updates/ios_download.png"] #images used for social media preview. comma separate each image path enclosed in double quotes
 #thumbnail: "/images/ios-updates/new_show_version.png" #featured-image of the page. i will recommend using same image for both preview and thumbnail
-tags: ["IOS","Cisco","Networking"] #comma separated tags enclosed in double quotes. also used for SEO.
-categories: [] #comma separated categories enclosed in double quotes.
+tags: [] #comma separated tags enclosed in double quotes. also used for SEO.
+categories: ["IOS","Cisco","Networking"] #comma separated categories enclosed in double quotes.
 #series: [] #A taxonomy used to list "See Also" Section in Opengraph Templates
 slug: "ios-v12-v15-upgrade" #Similar to WordPress's Slug (the end part of the url)
 disableComments: true #Set to 'true' if you need to disable comments for any post
@@ -57,7 +57,7 @@ After we have the download and see how much space we have available in our devic
 
 **Switch#dir flash**
 
- ***Disclaimer: Before you delete any files on your flash, make sure you know exactly what they do and if they are unused. Files that are safe to delete are typically older IOS versions that you are not currently booted to.***
+ ***Disclaimer: Before you delete any files on your flash, make sure you know exactly what they do and if they are unused.***
 
 ## TRANSFER AND EXTRACT THE .TAR FILE TO THE DEVICE'S FLASH
 
